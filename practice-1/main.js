@@ -40,8 +40,14 @@ var myVariable = 10;
 console.log(myVariable.name);
 myVariable();
 myVariable.toUpperCase();
+function hasName(obj) {
+    return !!obj &&
+        typeof obj === "object" &&
+        "name" in obj;
+}
 // unknown type
 var myUnknown = 10;
-console.log(myUnknown.name);
-myUnknown();
+if (hasName(myUnknown)) {
+    console.log(myUnknown.name);
+}
 myUnknown.toUpperCase();
