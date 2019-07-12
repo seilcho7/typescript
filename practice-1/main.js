@@ -35,3 +35,13 @@ console.log(a);
 var randomValue = 10;
 randomValue = true;
 randomValue = 'Seil';
+// typescript does not throw error because of 'any'
+var myVariable = 10;
+console.log(myVariable.name);
+myVariable();
+myVariable.toUpperCase();
+// unknown type
+var myUnknown = 10;
+console.log(myUnknown.name);
+myUnknown();
+myUnknown.toUpperCase();
