@@ -17,3 +17,21 @@ var isNew = null;
 var myName = undefined;
 var list1 = [1, 2, 3];
 var list2 = [1, 2, 3];
+// tuple (arrays with different variable types)
+var person1 = ['Seil', 22];
+// Red = 0, Green = 1, Blue = 2 by default
+var Color;
+(function (Color) {
+    Color[Color["Red"] = 0] = "Red";
+    Color[Color["Green"] = 5] = "Green";
+    Color[Color["Blue"] = 6] = "Blue";
+})(Color || (Color = {}));
+;
+var c = Color.Green;
+var a = Color.Red;
+console.log(c);
+console.log(a);
+// set as any possible type
+var randomValue = 10;
+randomValue = true;
+randomValue = 'Seil';

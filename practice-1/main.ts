@@ -25,3 +25,18 @@ let myName: string = undefined;
 
 let list1: number[] = [1,2,3];
 let list2: Array<number> = [1,2,3];
+
+// tuple (arrays with different variable types)
+let person1: [string, number] = ['Seil', 22];
+
+// Red = 0, Green = 1, Blue = 2 by default
+enum Color {Red, Green = 5, Blue};
+let c: Color = Color.Green;
+let a: Color = Color.Red;
+console.log(c);
+console.log(a);
+
+// set as any possible type
+let randomValue: any = 10;
+randomValue = true;
+randomValue = 'Seil';
