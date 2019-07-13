@@ -31,10 +31,10 @@ let person1: [string, number] = ['Seil', 22];
 
 // Red = 0, Green = 1, Blue = 2 by default
 enum Color {Red, Green = 5, Blue};
-let c: Color = Color.Green;
-let a: Color = Color.Red;
-console.log(c);
-console.log(a);
+let g: Color = Color.Green;
+let r: Color = Color.Red;
+console.log(r);
+console.log(g);
 
 // set as any possible type
 let randomValue: any = 10;
@@ -61,3 +61,25 @@ if (hasName(myUnknown)) {
 (myUnknown as string).toUpperCase();
 
 
+let a;
+a = 10;
+a = true;
+
+let b = 20;
+
+let multiType: number | boolean;
+multiType = 20;
+multiType = true;
+
+// any type
+let anyType: any;
+anyType = 20;
+anyType = true;
+
+
+// function
+function add(num1: number, num2?: number): number {
+    return num1 + num2;
+}
+add(5,1);
+add(5);

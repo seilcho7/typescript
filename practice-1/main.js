@@ -27,10 +27,10 @@ var Color;
     Color[Color["Blue"] = 6] = "Blue";
 })(Color || (Color = {}));
 ;
-var c = Color.Green;
-var a = Color.Red;
-console.log(c);
-console.log(a);
+var g = Color.Green;
+var r = Color.Red;
+console.log(r);
+console.log(g);
 // set as any possible type
 var randomValue = 10;
 randomValue = true;
@@ -51,3 +51,20 @@ if (hasName(myUnknown)) {
     console.log(myUnknown.name);
 }
 myUnknown.toUpperCase();
+var a;
+a = 10;
+a = true;
+var b = 20;
+var multiType;
+multiType = 20;
+multiType = true;
+// any type
+var anyType;
+anyType = 20;
+anyType = true;
+// function
+function add(num1, num2) {
+    return num1 + num2;
+}
+add(5, 1);
+add(5);
