@@ -43,9 +43,9 @@ randomValue = 'Seil';
 
 // typescript does not throw error because of 'any'
 let myVariable: any = 10;
-console.log(myVariable.name);
-myVariable();
-myVariable.toUpperCase();
+// console.log(myVariable.name);
+// myVariable();
+// myVariable.toUpperCase();
 
 function hasName(obj: any): obj is { name: string } {
     return !!obj &&
@@ -58,7 +58,7 @@ let myUnknown: unknown = 10;
 if (hasName(myUnknown)) {
     console.log(myUnknown.name);
 }
-(myUnknown as string).toUpperCase();
+// (myUnknown as string).toUpperCase();
 
 
 let a;
@@ -78,8 +78,36 @@ anyType = true;
 
 
 // function
+// optional parameter
 function add(num1: number, num2?: number): number {
     return num1 + num2;
 }
+// default parameter
+// function add(num1: number, num2?: number): number {
+//     return num1 + num2;
+// }
 add(5,1);
 add(5);
+
+
+// interface
+
+interface Person {
+    firstName: string;
+    lastName?: string;
+}
+
+// function fullName(person: {firstName: string, lastName: string}) {
+//     console.log(`${person.firstName} ${person.lastName}`);
+// }
+
+function fullName(person: Person) {
+    console.log(`${person.firstName} ${person.lastName}`);
+}
+
+let p = {
+    firstName: 'Bruce',
+    lastName: 'Wayne'
+};
+
+fullName(p);
