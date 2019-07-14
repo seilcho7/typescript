@@ -99,6 +99,11 @@ var p = {
 fullName(p);
 // class
 var Employee = /** @class */ (function () {
+    // access modifier
+    // if variable is private, the variable is only accessible inside the class
+    // private employeeName: string;
+    // protected access modifier: variable is accessible within class and its inherited classes
+    // protected employeeName: string;
     function Employee(name) {
         this.employeeName = name;
     }

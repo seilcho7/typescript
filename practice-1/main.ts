@@ -114,14 +114,14 @@ fullName(p);
 
 // class
 class Employee {
-    // employeeName: string;
+    public employeeName: string;
 
     // access modifier
     // if variable is private, the variable is only accessible inside the class
     // private employeeName: string;
 
     // protected access modifier: variable is accessible within class and its inherited classes
-    protected employeeName: string;
+    // protected employeeName: string;
     constructor(name: string) {
         this.employeeName = name;
     }
